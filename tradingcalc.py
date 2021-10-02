@@ -1,5 +1,6 @@
 import time
-print("This is SmartXBOT Trading Calculator v0.1")
+#Options
+print("This is SmartXBOT Trading Calculator v0.3.5")
 print("""Please select one of the option:
 1. Personal Profit
 2. Total Profit
@@ -69,14 +70,14 @@ Totalprofit = IDR * TD
 if (Whichprofit == 1):
     cut = int(input('Cut percentage (do not include "%"): '))
     coma = "{:,.2f}".format(Totalprofit)
-    print("Your estimated total profit is Rp " + coma)
+    print("Your estimated total profit is Rp " + coma + "/month")
     time.sleep(1)
     Profitcut = Totalprofit * cut/100
     s = "{:,.2f}".format(Profitcut)
-    print("Your estimated cut profit is Rp " + s)
+    print("Your estimated cut profit is Rp " + s + "/month")
 elif (Whichprofit == 2):
     s = "{:,.2f}".format(Totalprofit)
-    print("Your estimated total profit is Rp " + s)
+    print("Your estimated total profit is Rp " + s + "/month")
 
 value = True
 while (value):
