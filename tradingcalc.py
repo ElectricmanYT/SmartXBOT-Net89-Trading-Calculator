@@ -102,8 +102,11 @@ elif (Whichprofit == 6):
     Profitearned = USD * 13000
     cut = int(input('Cut percentage (do not include "%"): '))
     Profitcut = Profitearned * cut/100
+    stotal = "{:,.2f}".format(Profitearned)
     s = "{:,.2f}".format(Profitcut)
-    print("You have earned Rp " + s)
+    print("You have earned a total of Rp " + stotal)
+    time.sleep(1)
+    print("You have earned a profit cut of Rp " + s)
 else:
     print("Your choice is not listed in the options.")
 
