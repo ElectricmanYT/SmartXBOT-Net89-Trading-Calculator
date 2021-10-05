@@ -1,7 +1,9 @@
 import time
 #Options
-print("This is SmartXBOT Trading Calculator v0.4")
-time.sleep(1)
+print("This is SmartXBOT Trading Calculator v0.4.1")
+time.sleep(0.5)
+print("""""")
+time.sleep(0.5)
 print("""Please select one of the option:
 1. Personal Profit
 2. Total Profit
@@ -75,9 +77,11 @@ def USDCalculate(USD):
 #Profit
 if (Whichprofit == 1):
     USD = int(input("How many USD did you deposit: "))
+    print("""""")
     Totalprofit = USDCalculate(USD)
     cut = int(input('Cut percentage (do not include "%"): '))
     coma = "{:,.2f}".format(Totalprofit)
+    print("""""")
     print("Your estimated total profit is Rp " + coma + "/month")
     time.sleep(1)
     Profitcut = Totalprofit * cut/100
@@ -85,15 +89,20 @@ if (Whichprofit == 1):
     print("Your estimated cut profit is Rp " + s + "/month")
 elif (Whichprofit == 2):
     USD = int(input("How many USD did you deposit: "))
+    print("""""")
     Totalprofit = USDCalculate(USD)
     s = "{:,.2f}".format(Totalprofit)
+    print("""""")
     print("Your estimated total profit is Rp " + s + "/month")
 elif (Whichprofit == 3):
+    print("""""")
     print("This option is work in progress.")
 elif (Whichprofit == 4):
+    print("""""")
     print("This option is work in progress.")
 elif (Whichprofit == 5):
     USD = int(input("How many USD did you earn: "))
+    print("""""")
     Profitearned = USD * 13000
     s = "{:,.2f}".format(Profitearned)
     print("You have earned Rp " + s)
@@ -101,6 +110,7 @@ elif (Whichprofit == 6):
     USD = int(input("How many USD did you earn: "))
     Profitearned = USD * 13000
     cut = int(input('Cut percentage (do not include "%"): '))
+    print("""""")
     Profitcut = Profitearned * cut/100
     stotal = "{:,.2f}".format(Profitearned)
     s = "{:,.2f}".format(Profitcut)
