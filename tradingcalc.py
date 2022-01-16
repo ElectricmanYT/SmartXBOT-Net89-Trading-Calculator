@@ -68,7 +68,7 @@ def USDCalculate(USD):
     Trader = USDProfit * Profitshare
     IDR = Trader * 13000
     TD = int(input("Estimate your trading days: "))
-    if 22 < TD:
+    if 22 < TD and 12 >= TD:
         TD = 22
     Totalprofit = IDR * TD
 
