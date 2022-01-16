@@ -1,6 +1,6 @@
 import time
 #Options
-print("This is SmartXBOT Trading Calculator v0.4.2")
+print("This is SmartXBOT Trading Calculator v0.4.3")
 time.sleep(0.5)
 print("""""")
 time.sleep(0.5)
@@ -16,6 +16,11 @@ time.sleep(1)
 Whichprofit = int(input("Select one of the options above: "))
 
 #Function
+def EndScript():
+    value = True
+    while (value):
+        time.sleep(1)
+
 def USDCalculate(USD):
     if (500 <= USD and 2500 > USD):
         print("Your bot price is 100 USD")
@@ -70,6 +75,8 @@ def USDCalculate(USD):
     TD = int(input("Estimate your trading days: "))
     if 22 < TD:
         TD = 22
+        print('Your Estimation is over the top estimation of Loss Trading Days')
+        EndScript()
     Totalprofit = IDR * TD
 
     return Totalprofit
